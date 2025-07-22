@@ -12,7 +12,7 @@
 /* Import custom font */
 @font-face {
   font-family: 'Vanity';
-  src: url('/fonts/Vanity/Vanity-Light.ttf') format('truetype');
+  src: url('./fonts/Vanity/Vanity-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
