@@ -1,0 +1,241 @@
+:root {
+  /* Define color variables for easy theme management */
+  --color-black: #0E0E0E;
+  --color-white: #F8F8F8;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #FFD700;
+  --color-dark-gray: #1C1C1C;
+  --color-bordure: #745c3c;
+  --color-blanc-casse: rgb(237, 226, 203);
+}
+
+/* Import custom font */
+@font-face {
+  font-family: 'Vanity';
+  src: url('/fonts/Vanity/Vanity-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Base body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'Vanity', sans-serif;
+}
+
+/* Default link styles */
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* Heading styles */
+h2{
+  font-size: 50px;
+  color: var(--color-gold);
+}
+
+/* Button styles */
+button {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: var(--color-gold-hover);
+}
+
+/* Remove focus outline and shadow from inputs and textareas */
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: var(--color-black);
+}
+
+/* ================= Header Styles ================= */
+
+/* Header base font size */
+header {
+  font-size: 25px;
+}
+
+/* Header style when scrolled */
+header.scrolled {
+  background: rgba(26, 26, 26, 0.807); /* Semi-transparent background */
+  backdrop-filter: blur(10px);          /* Optional glass effect */
+}
+
+/* Navigation link styles inside header */
+header nav a {
+  text-decoration: none;
+}
+
+/* Navigation link hover effect */
+header nav a:hover {
+  color: var(--color-gold-hover);
+  text-decoration: underline;
+}
+
+/* Header container styles */
+#en-tete {
+  background: transparent;
+  z-index: 1000;
+}
+
+/* Header container style when scrolled */
+#en-tete.scrolled {
+  background: rgba(26, 26, 26, 0.807);
+  backdrop-filter: blur(10px);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  position: absolute;
+  top: 100%; /* Just below the header */
+  right: 0;
+  background-color: rgba(248, 248, 248, 0.877);
+  backdrop-filter: blur(10px);
+  width: 50vw;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Custom hamburger icon for navbar toggler */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ================= Hero Section ================= */
+
+/* Hero background image and layout */
+.hero-background {
+  background-image: url('img/hero.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ================= Menu Section ================= */
+
+/* Menu grid image styles */
+.menu-grid img{
+  width: 100%;
+  height: 300px;
+}
+
+/* ================= About Section ================= */
+
+/* About section paragraph styles */
+.about p{
+  font-size: 20px;
+}
+
+/* About section image styles */
+.about-item img{
+  height: 70vh;
+}
+
+/* ================= Contact Section ================= */
+
+/* Contact section background */
+.contact {
+  background-color: var(--color-dark-gray);
+}
+
+/* Contact form card styles */
+.card-form{
+  border-radius: 5px;
+  border: 2px solid var(--color-bordure);
+}
+
+/* ================= Footer Section ================= */
+
+/* Footer container styles */
+footer{
+  padding: 1rem 1rem;
+  background-color: var(--color-dark-gray);
+}
+
+/* Footer logo image styles */
+.footer-content img{
+  width: 125px;
+  height: auto;
+}
+
+/* Footer paragraph styles */
+footer p{
+  height: 100%;
+}
+
+/* Back to top button styles */
+#topButton {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* ================= Social Icons ================= */
+
+/* LinkedIn icon color */
+.fa-linkedin    {color: #007bff;}
+/* GitHub icon color */
+.fa-github      {color: black;}
+/* Instagram icon color */
+.fa-instagram   {color: palevioletred;}
+
+/* Social icon size and spacing */
+.fa-github, .fa-instagram, .fa-linkedin {
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+/* ================= Testimonials Carousel ================= */
+
+/* Carousel inner container height */
+.carousel-inner{
+  height: 100%;
+}
+
+/* Carousel image height */
+.carousel-inner img {
+  height: 400px; /* Adjust as needed */
+}
+
+/* ================= Responsive Styles ================= */
+
+/* Styles for small screens (max-width: 426px) */
+@media (max-width: 426px) {
+  .hero h1, .hero h3{
+    font-weight: bolder;
+    color: var(--color-black);
+  }
+
+  .hero-background{
+    background-attachment: scroll;
+  }
+}
+
+/* Styles for tablets (min-width: 425px) and (max-width: 768px) */
+@media (min-width: 425px) and (max-width: 768px) {
+  header{
+    font-size: 22px;
+  }
+}
